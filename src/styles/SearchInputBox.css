@@ -1,0 +1,18 @@
+.search-input-container {
+  display: flex;
+  justify-content: center; /* Centers the input horizontally */
+  align-items: center;    /* Centers the input vertically */
+  margin-left: 20px;      /* Adds some space around the input */
+  width: 48%;             /* Adjust the width as needed */
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-top: 10px;
+  
+}
+.pf-c-search-input {
+  width: 120%;            /* Makes the search input take full width */
+}
+.flex{
+  display: flex;
+}

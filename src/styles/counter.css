@@ -1,0 +1,36 @@
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;  /* White background */
+  padding: 2px 2px 2px 2px;
+  border-radius: 5px;  /* Rounded corners */
+  border: 1px solid black;
+}
+
+.counter-button {
+  background-color: white; 
+  border: none; /* Ensure the border is completely removed */
+  padding: 3px 3px 3px 3px;  /* Padding inside buttons */
+  cursor: pointer;  /* Cursor changes to pointer on hover */
+  outline: none;  /* Remove button outline on focus */
+}
+
+.counter-button:focus,
+.counter-button:active {
+  outline: none;  /* Ensure no outline on focus or active state */
+  border: none;   /* Ensure no border on focus or active state */
+}
+
+.counter-button svg {
+  color: black;  /* Make the icon color black */
+  font-size: 14px;  /* Increase the icon size */
+  border: none;  /* Remove any border around the icon */
+  outline: none; /* Remove outline for svg */
+}
+
+.counter-value {
+  margin: 0 10px;
+  font-size: 18px;  /* Font size for the number */
+  font-weight: bold;
+}

@@ -1,0 +1,24 @@
+/* Styles for the tableCard component */
+.table-card {
+  position: absolute;
+  padding: 2px;
+  background-color: none; /* Set background color */
+  border-radius: 3px; /* Rounded corners */
+  max-width: 850px; /* Set max width for better control */
+  width: 730px;
+  height: 22 0px;
+  margin-top: 106px;
+  margin-left: 2px;
+}
+.custom-row {
+  padding: 5px 5px 5px 5px; /* Adjust the padding as needed */
+}
+
+.ant-table-cell {
+  padding: 5px 5px 5px 5px; /* Adjust the padding for each cell */
+}
+
+
+
+
+
