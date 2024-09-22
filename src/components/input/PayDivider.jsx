@@ -10,7 +10,7 @@ import {Icon} from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import CouponIcon from '@rsuite/icons/Coupon';
 import TagIcon from '@rsuite/icons/Tag';
-
+import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
 const style = {
   p: 0,
   width: '200%',
@@ -30,7 +30,6 @@ export default function ListDividers() {
    
       <ListItem>
         <ListItemText  primary="Add Notes" sx={{color:'black',marginLeft:'150px'}} />
-         
       </ListItem>
       <Divider component="li" />
       <ListItem sx={{padding:'7px 7px 7px 7px'}}>

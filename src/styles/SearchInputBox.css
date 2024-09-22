@@ -16,3 +16,50 @@
 .flex{
   display: flex;
 }
+
+
+
+.auto-stories-icon {
+  border: 1px solid black;
+  padding: 6px 6px 6px 6px;
+  margin-top: 12px;
+  width: 37px;
+  height: 37px;
+  margin-left: 39px;
+  border-radius: 4px;
+}
+
+/* Hover effect */
+.auto-stories-icon:hover {
+  background-color: rgb(211, 207, 207); /* Background color on hover */
+}
+/* Parent container for the SearchInput and Icon */
+.search-input-container {
+  position: relative;  /* Ensures that the child component positions itself relative to this container */
+  padding: 16px;
+}
+
+
+
+
+.catalog-overlay {
+  position: fixed; /* Ensure it overlaps everything */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it stays on top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog-overlay .catalog-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  height: 80%;
+}

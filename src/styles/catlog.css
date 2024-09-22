@@ -1,0 +1,20 @@
+.elevation-container {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f5f5f5; /* Light background */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 450px; /* Makes the column smaller */
+  margin-left: 810px; /* Aligns the column to the right */
+}
+
+.elevation-item {
+  text-align: center;
+  color: #555555; /* Darker text color */
+  height: 60px;
+  line-height: 60px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Basic shadow for elevation */
+  border-radius: 4px;
+  background-color: #ffffff; /* Card background color */
+}
