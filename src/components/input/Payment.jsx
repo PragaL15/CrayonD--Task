@@ -10,8 +10,8 @@ export default function PaymentCard() {
         theme={{
           palette: {
             primary: {
-              main: '#e8eaf6',
-              dark: '#e8eaf6',
+              main: '#f1f3f6',
+              dark: '#f1f3f6',
             },
           },
         }}

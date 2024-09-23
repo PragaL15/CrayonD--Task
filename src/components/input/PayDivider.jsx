@@ -23,7 +23,7 @@ const style = {
   borderColor: "divider",
   top: "430px",
   left: "825px",
-  backgroundColor: "#e8eaf6",
+  backgroundColor: "#f1f3f6",
 };
 
 export default function ListDividers() {

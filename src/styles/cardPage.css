@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap');
 
-
+.body{
+  background-color: #FEFEFF;
+}
 
 .table-card {
   position: absolute;
   padding: 2px;
-  background-color: white; 
+  background-color: #FEFEFF; 
   border-radius: 3px; 
   max-width: 850px; 
   width: 730px;
   height: 22 0px;
-  margin-top: 106px;
+  margin-top: 60px;
   margin-left: 2px;
 }
 .custom-row {

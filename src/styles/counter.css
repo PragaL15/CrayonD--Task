@@ -3,23 +3,25 @@
   align-items: center;
   justify-content: center;
   background-color: white;  /* White background */
-  padding: 2px 2px 2px 2px;
+  padding: 2px 4px 2px 4px;
   border-radius: 5px;  /* Rounded corners */
-  border: 1px solid black;
+  border: 1px solid rgb(204, 204, 204);
+
 }
 
 .counter-button {
   background-color: white; 
-  border: none; /* Ensure the border is completely removed */
-  padding: 3px 3px 3px 3px;  /* Padding inside buttons */
-  cursor: pointer;  /* Cursor changes to pointer on hover */
-  outline: none;  /* Remove button outline on focus */
+  border: none; 
+  padding: 3px 6px 3px 6px; 
+  cursor: pointer; 
+  outline: none; 
+ 
 }
 
 .counter-button:focus,
 .counter-button:active {
-  outline: none;  /* Ensure no outline on focus or active state */
-  border: none;   /* Ensure no border on focus or active state */
+  outline: none;  
+  border: none;   
 }
 
 .counter-button svg {
@@ -33,4 +35,5 @@
   margin: 0 10px;
   font-size: 18px;  /* Font size for the number */
   font-weight: bold;
+ 
 }

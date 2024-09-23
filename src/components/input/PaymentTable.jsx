@@ -1,100 +1,69 @@
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import '../../styles/PaymentTab.css'; 
+import React, { useState, useEffect } from 'react';
+import '../../styles/PaymentTab.css';
 
 const TAX_RATE = 0.07;
 
+// Function to format currency
 function ccyFormat(num) {
   return `SAR ${num.toFixed(2)}`;
 }
 
-function createRow(desc, qty) {
-  return { desc, qty };
-}
-
-function subtotal(items) {
-  return items
-    .map(({ qty }) => parseFloat(qty.replace('SAR ', '')) || 0)
-    .reduce((sum, i) => sum + i, 0);
-}
-
-const rows = [
-  createRow('Sub Total', 'SAR 0.00'),
-  createRow('Taxable Amount', 'SAR 0.00'),
-  createRow('Total Tax', 'SAR 0.00'),
+// Default rows representing Sub Total, Taxable Amount, and Total Tax
+const defaultRows = [
+  { desc: 'Sub Total', qty: 'SAR 0.00' },
+  { desc: 'Taxable Amount', qty: 'SAR 0.00' },
+  { desc: 'Total Tax', qty: 'SAR 0.00' },
 ];
 
-const invoiceSubtotal = subtotal(rows);
-const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-const invoiceTotal = invoiceTaxes + invoiceSubtotal;
+export default function PaymentTable({ initialRows = defaultRows, name = 'Ashwin' }) {
+  const [rows, setRows] = useState(initialRows);
 
-export default function PaymentTable() {
+  useEffect(() => {
+    setRows(initialRows);
+  }, [initialRows]);
+
+  function subtotal(items) {
+    return items.reduce((sum, { qty }) => {
+      const value = parseFloat(qty.replace('SAR ', '')) || 0;
+      return sum + value;
+    }, 0);
+  }
+
+  const invoiceSubtotal = subtotal(rows);
+  const invoiceTaxes = TAX_RATE * invoiceSubtotal;
+  const invoiceTotal = invoiceTaxes + invoiceSubtotal;
+
+  const updatedRows = [
+    { desc: 'Sub Total', qty: ccyFormat(invoiceSubtotal) },
+    { desc: 'Taxable Amount', qty: ccyFormat(invoiceSubtotal) }, 
+    { desc: 'Total Tax', qty: ccyFormat(invoiceTaxes) },
+  ];
+
   return (
-    <TableContainer
-      component={Paper}
-      sx={{
-        position: 'absolute',
-        top: '1px',
-        left: '796px',
-        width: '510px',
-        height: '310px',
-        background: '#e8eaf6',
-        boxShadow: '0px 0px 0px 0px',
-        padding: '10px 5px 10px 5px',
-        overflow: 'hidden', 
-      }}
-    >
-      <Table sx={{ minWidth: 510 }} aria-label="spanning table">
-        <TableHead>
-          <div className="para">
-            <h1 className="para1">Payment Summary</h1>
-            <p className="para2">Ashwin</p>
-          </div>
-        </TableHead>
-        <TableBody>
-          {rows.map((row, index) => (
-            <TableRow
-              key={row.desc}
-              className={`${
-                index === 0
-                  ? 'subtotal-row'
-                  : index === 1
-                  ? 'taxable-amount-row'
-                  : 'total-tax-row'
-              }`}
-            >
-              <TableCell
-                sx={{
-                  padding: '2px 3px',
-                  marginLeft: '4px',
-                }}
-              >
-                {row.desc}
-              </TableCell>
-              <TableCell
-                align="right"
-                sx={{
-                  padding: '2px 6px', // Reduce padding for closeness
-                }}
-              >
-                {row.qty}
-              </TableCell>
-            </TableRow>
+    <div className="payment-container">
+      <div className="payment-header">
+        <h1 className="para1">Payment Summary</h1>
+        <p className="para2">{name}</p>
+      </div>
+      <table className="payment-table">
+        <thead>
+          <tr>
+            <th colSpan={2}></th>
+          </tr>
+        </thead>
+        <tbody>
+          {updatedRows.map((row) => (
+            <tr key={row.desc}>
+              <td>{row.desc}</td>
+              <td className="align-right">{row.qty}</td>
+            </tr>
           ))}
-          <TableRow>
-            <TableCell colSpan={2} sx={{ padding: '2px 4px' }}>
-              Grand Total
-            </TableCell>
-            <TableCell>{ccyFormat(invoiceTotal)}</TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </TableContainer>
+          <tr>
+            <td>Grand Total</td>
+            <td className="align-right">{ccyFormat(invoiceTotal)}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 }

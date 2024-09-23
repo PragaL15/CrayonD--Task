@@ -50,8 +50,7 @@ export const SearchInputBox = ({ onButtonClick }) => {
         onClick={onButtonClick}  
         sx={{
           border: 1,
-          backgroundColor:'#135eeb',
-          borderColor: 'black',
+          borderColor: 'rgb(185, 183, 183)',
           padding: 1,
           marginTop: 1.13,
           width: 39,
@@ -59,7 +58,7 @@ export const SearchInputBox = ({ onButtonClick }) => {
           marginLeft: 2.4,
           borderRadius: 1,
           cursor: 'pointer',
-          color:'white'
+          color:'#2980b9'
 
         }}
       />

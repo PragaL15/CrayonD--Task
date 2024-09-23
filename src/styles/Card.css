@@ -5,5 +5,18 @@
 }
 .os{
   font-size: 13px;
-  margin-top: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.go{
+  font-size: 18px;
+  font-weight: bold;
+}
+.os1{
+ font-weight: bold;
+ font-size: 13px;
+}
+.fles{
+  display: flex;
 }

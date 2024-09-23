@@ -1,19 +1,70 @@
-.para {
-  display: flex;
-  margin-top: 7px;
+/* General styles for the payment container */
+.payment-container {
+  position: absolute;
+  top: 1px;
+  left: 796px;
+  width: 510px;
+  height: 310px;
+  background-color: #f1f3f6;
+  box-shadow: 0px 0px 0px 0px;
+  padding: 10px 5px 10px 5px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Payment summary heading and user name */
+.payment-header {
+  margin-bottom: 20px;
 }
 
 .para1 {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
-  margin-left: 20px;
+  color: #333;
+  margin: 0;
 }
 
 .para2 {
-  margin-left: 170px;
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0 10px 0;
 }
 
-.grand-total-value {
-  margin-left: 310px; 
-  display: inline-block;
+/* Table styling */
+.payment-table {
+  width: 80%;
+  padding: 4px;
+  border-collapse: collapse;
+}
+
+.payment-table th, 
+.payment-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alignment of right-side columns */
+.align-right {
+  text-align: right;
+}
+
+/* Mobile styling */
+@media (max-width: 600px) {
+  .payment-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .para1 {
+    font-size: 18px;
+  }
+
+  .para2 {
+    font-size: 14px;
+  }
+
+  .payment-table th, 
+  .payment-table td {
+    font-size: 14px;
+  }
 }
