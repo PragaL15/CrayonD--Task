@@ -12,40 +12,51 @@ import logo from '../../assets/Nestle.jpg'
 import icon from '../../assets/mainicon.png'
 import { alignProperty } from '@mui/material/styles/cssUtils';
 const imgStyle = {
-  width: '70px',
-  height: '80px',
+  width: '55px',
+  height: '70px',
   borderRadius: '5px',
+  marginTop: '17px',
+ 
 };
 
 const iconStyle = {
-  width:'85px',
+  width:'80px',
   height:'70px',
   marginRight: '50px',
+  marginBottom: '25px',
+  marginTop:'1px',
 }
 const Side_bar = () => {
   return (
     <div className="sidebar">
       <img src={icon} style={iconStyle}/>
       <div className="sidebar-icon" >
-        <DvrIcon />
+        <DvrIcon  />
+        <p className="icon-label">Dashboard</p>
       </div>
       <div className="sidebar-icon active">
         <ShoppingCartIcon />
+        <p className="icon-label">sales</p>
       </div>
       <div className="sidebar-icon">
         <DescriptionIcon />
+        <p className="icon-label">orders</p>
       </div>
       <div className="sidebar-icon">
         <AccountBoxIcon />
+        <p className="icon-label">Customer</p>
       </div>
       <div className="sidebar-icon">
         <AddBusinessIcon />
+        <p className="icon-label">Items</p>
       </div>
       <div className="sidebar-icon">
         <Inventory2Icon />
+        <p className="icon-label">Inventory</p>
       </div>
       <div className="sidebar-icon">
         <AddAlertIcon/>
+        <p className="icon-label">Alerts</p>
       </div>
       <img src={logo} alt="Logo" style={imgStyle} />;
     </div>

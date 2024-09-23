@@ -15,8 +15,8 @@ import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
 
 const style = {
   p: 0,
-  width: "220%",
-  maxWidth: 470,
+  width: "270%",
+  maxWidth: 600,
   position: "absolute",
   borderRadius: 1,
   border: "0px solid none",
@@ -90,7 +90,7 @@ export default function ListDividers() {
       </ListItem>
 
       <Divider component="li" />
-      <ListItem sx={{ padding: "12px 12px 12px 12px" }}>
+      <ListItem sx={{ padding: "13px 13px 13px 13px" }}>
         <BillButtons />
       </ListItem>
       <Divider component="li" />

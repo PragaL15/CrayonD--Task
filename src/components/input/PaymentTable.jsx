@@ -42,7 +42,7 @@ export default function PaymentTable() {
         position: 'absolute',
         top: '1px',
         left: '806px',
-        width: '485px',
+        width: '465px',
         height: '310px',
         background: '#e8eaf6',
         boxShadow: '0px 0px 0px 0px',
@@ -70,9 +70,9 @@ export default function PaymentTable() {
             >
               <TableCell
                 sx={{
-                  padding: '4px 10px', // Adjusted padding
-                  whiteSpace: 'nowrap', // Prevent text wrapping
-                  maxWidth: '50%', // Control column width
+                  padding: '4px 10px', 
+                  whiteSpace: 'nowrap',
+                  maxWidth: '40%', 
                 }}
               >
                 {row.desc}
@@ -82,7 +82,7 @@ export default function PaymentTable() {
                 sx={{
                   padding: '4px 10px',
                   whiteSpace: 'nowrap',
-                  maxWidth: '50%', // Control column width
+                  maxWidth: '40%', 
                 }}
               >
                 {row.qty}
