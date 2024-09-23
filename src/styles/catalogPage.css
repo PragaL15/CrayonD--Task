@@ -1,0 +1,7 @@
+.catalog-page-container {
+  display: flex;
+  margin-left: 200px;
+  width: 300px;
+  
+  background-color: #f8f9fa; /* Light background color */
+}

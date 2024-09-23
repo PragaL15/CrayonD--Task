@@ -6,7 +6,7 @@ import PhoneAndroidOutlinedIcon from '@mui/icons-material/PhoneAndroidOutlined';
 import '../../styles/Card.css';
 const DogCard = () => {
   return (
-    <Card sx={{ maxWidth: 720, boxShadow: 0 , width:'800px',marginLeft:'20px',top:'80px',position:'absolute' }}>
+    <Card sx={{ maxWidth: 720, boxShadow: 0 , width:'680px',marginLeft:'20px',top:'80px',position:'absolute' }}>
       <CardContent>
         <div className="both">
         <Typography variant="h5" component="div">
