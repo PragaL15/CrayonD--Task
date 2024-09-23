@@ -2,38 +2,45 @@
   width: 60px;
   background-color: #052d54;
   display: flex;
+  flex: content;
   flex-direction: column;
   align-items: center;
-  position: static;
-  justify-content: center;
+  justify-content: space-between;
 
 }
 .icon-label{
-  font-size: 8px;
- justify-content: center;
+  font-size: 10px;
+  margin-top: 5px;
+  text-align: center;
+  color: inherit;
 }
 
 .sidebar-icon {
-  margin-bottom: 16px;
-  width: 40px;
-  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-bottom: 15px;
   color: #ecf0f1;
-  font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .sidebar-icon:hover {
-  color: #2980b9;
-  padding: 7px 7px 13px 7px;
   background-color: white;
-  border-radius: 4px;
+  color: #2980b9;
+  border-radius: 8px;
+  width: 70px;
+  padding: 4px;
 }
 
 .sidebar-icon.active {
-  color: #2980b9;
-  padding: 12px 12px 12px 12px;
   background-color: white;
-  border-radius: 4px;
+  color: #2980b9;
+  border-radius: 8px;
+  width: 70px;
+  padding: 8px;
 }
 
 .sidebar-bottom {
@@ -44,4 +51,3 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-

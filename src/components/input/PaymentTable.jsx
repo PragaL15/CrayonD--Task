@@ -6,7 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import '../../styles/PaymentTab.css'; // Ensure your CSS is imported
+import '../../styles/PaymentTab.css'; 
 
 const TAX_RATE = 0.07;
 
@@ -41,15 +41,16 @@ export default function PaymentTable() {
       sx={{
         position: 'absolute',
         top: '1px',
-        left: '806px',
-        width: '465px',
+        left: '796px',
+        width: '510px',
         height: '310px',
         background: '#e8eaf6',
         boxShadow: '0px 0px 0px 0px',
+        padding: '10px 5px 10px 5px',
         overflow: 'hidden', 
       }}
     >
-      <Table sx={{ minWidth: 495 }} aria-label="spanning table">
+      <Table sx={{ minWidth: 510 }} aria-label="spanning table">
         <TableHead>
           <div className="para">
             <h1 className="para1">Payment Summary</h1>
@@ -70,9 +71,8 @@ export default function PaymentTable() {
             >
               <TableCell
                 sx={{
-                  padding: '4px 10px', 
-                  whiteSpace: 'nowrap',
-                  maxWidth: '40%', 
+                  padding: '2px 3px',
+                  marginLeft: '4px',
                 }}
               >
                 {row.desc}
@@ -80,9 +80,7 @@ export default function PaymentTable() {
               <TableCell
                 align="right"
                 sx={{
-                  padding: '4px 10px',
-                  whiteSpace: 'nowrap',
-                  maxWidth: '40%', 
+                  padding: '2px 6px', // Reduce padding for closeness
                 }}
               >
                 {row.qty}
@@ -90,12 +88,10 @@ export default function PaymentTable() {
             </TableRow>
           ))}
           <TableRow>
-            <TableCell colSpan={2} sx={{ padding: '4px 6px 6px 2px', ml:10 }}>
+            <TableCell colSpan={2} sx={{ padding: '2px 4px' }}>
               Grand Total
-              <div className="grand-total-value">
-                {ccyFormat(invoiceTotal)}
-              </div>
             </TableCell>
+            <TableCell>{ccyFormat(invoiceTotal)}</TableCell>
           </TableRow>
         </TableBody>
       </Table>
