@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: static;
 }
 .sidebar-icon {
   margin: 16px 0;
@@ -16,14 +17,14 @@
 
 .sidebar-icon:hover {
   color: #2980b9;
-  padding: 15px 15px 16px 16px;
+  padding: 12px 12px 12px 12px;
   background-color: white;
   border-radius: 4px;
 }
 
 .sidebar-icon.active {
   color: #2980b9;
-  padding: 15px 15px 16px 16px;
+  padding: 12px 12px 12px 12px;
   background-color: white;
   border-radius: 4px;
 }

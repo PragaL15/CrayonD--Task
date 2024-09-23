@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Table, Button } from 'antd';
-import { DeleteOutlined } from '@ant-design/icons';
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import Counter from '../../components/input/counter'; // Import the new Counter component
 import '../../styles/cardPage.css'; // Ensure your CSS is imported
 
@@ -15,20 +15,25 @@ const columns = [
     dataIndex: 'quantity',
     key: 'quantity',
     render: (_, record) => (
-      <Counter />  // Use the Counter component for the quantity column
+      <Counter />  
     ),
   },
   {
     title: 'Amount (SAR)',
     dataIndex: 'amount',
     key: 'amount',
+    render: (text) => (
+      <div style={{ fontWeight: 'bold' }}>
+        {text}
+      </div>
+    ),
   },
   {
     key: 'action',
     render: (_, record) => (
       <Button
         type="link"
-        icon={<DeleteOutlined />}
+        icon= {<DeleteOutlinedIcon/>}
         onClick={() => handleDelete(record.key)}
       />
     ),
@@ -81,8 +86,8 @@ const TableCard1 = () => {
       <Table
         columns={columns}
         dataSource={data}
-        pagination={false} // Disable pagination for this example
-        rowClassName={() => 'custom-row'} // Apply custom row class
+        pagination={false} 
+        rowClassName={() => 'custom-row'} 
       />
     </div>
   );

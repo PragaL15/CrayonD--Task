@@ -42,11 +42,11 @@ export default function PaymentTable() {
         position: 'absolute',
         top: '1px',
         left: '806px',
-        width: '495px',
+        width: '485px',
         height: '310px',
         background: '#e8eaf6',
         boxShadow: '0px 0px 0px 0px',
-        overflow: 'hidden', // Prevents overflow
+        overflow: 'hidden', 
       }}
     >
       <Table sx={{ minWidth: 495 }} aria-label="spanning table">

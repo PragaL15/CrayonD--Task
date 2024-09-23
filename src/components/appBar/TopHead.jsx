@@ -1,9 +1,9 @@
 import React from 'react';
 import { SearchInput } from '@patternfly/react-core';
-import '../../styles/SearchInputBox.css';  // Your custom CSS
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';  // The icon you're using
+import '../../styles/SearchInputBox.css';  
+import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined'; 
 import  { useState } from 'react';
-export const SearchInputBox = ({ onButtonClick }) => {  // onButtonClick prop passed from CartPage
+export const SearchInputBox = ({ onButtonClick }) => {  
   const [value, setValue] = useState('');
   const [resultsCount, setResultsCount] = useState(0);
   const [currentResult, setCurrentResult] = useState(1);
@@ -32,8 +32,9 @@ export const SearchInputBox = ({ onButtonClick }) => {  // onButtonClick prop pa
   return (
     <div className="flex">
       <div className="search-input-container">
-        <SearchInput
-          placeholder=""
+        <SearchInput sx={{paddingLeft:8}}
+          className="search-input" 
+          placeholder="Search"
           value={value}
           onChange={(_event, value) => onChange(value)}
           onClear={onClear}
@@ -45,19 +46,21 @@ export const SearchInputBox = ({ onButtonClick }) => {  // onButtonClick prop pa
         />
       </div>
 
-      {/* Icon button that triggers the prop function onButtonClick */}
-      <AutoStoriesIcon
-        onClick={onButtonClick}  // Clicking this toggles the state in CartPage
+      <AutoStoriesOutlinedIcon
+        onClick={onButtonClick}  
         sx={{
           border: 1,
+          backgroundColor:'#135eeb',
           borderColor: 'black',
-          padding: 0.85,
-          marginTop: 1.5,
-          width: 37,
-          height: 37,
-          marginLeft: 4,
+          padding: 1,
+          marginTop: 1.13,
+          width: 39,
+          height: 39,
+          marginLeft: 2.4,
           borderRadius: 1,
-          cursor: 'pointer'
+          cursor: 'pointer',
+          color:'white'
+
         }}
       />
     </div>
