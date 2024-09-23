@@ -11,7 +11,7 @@ const DogCard = () => {
         <div className="both">
         <Typography variant="h5" component="div">
           Cart Summary
-          <p className='os'>order summary</p>
+          <p className='os'>order id:0001</p>
         </Typography>
         <Typography variant="body2" color="text.primary">
           <div className='imp'>

@@ -41,14 +41,14 @@ export default function PaymentTable() {
       sx={{
         position: 'absolute',
         top: '1px',
-        left: '822px',
-        width: '455px',
+        left: '810px',
+        width: '495px',
         height: '310px',
         background: '#e8eaf6',
         boxShadow: '0px 0px 0px 0px',
       }}
     >
-      <Table sx={{ minWidth: 500 }} aria-label="spanning table">
+      <Table sx={{ minWidth: 530 }} aria-label="spanning table">
         <TableHead>
           <div className="para">
             <h1 className="para1">Payment Summary</h1>
@@ -79,7 +79,7 @@ export default function PaymentTable() {
             <TableCell colSpan={2} sx={{ padding: '4px' }}>
               Grand Total
             </TableCell>
-            <TableCell sx={{ml:10}}>
+            <TableCell sx={{mr:"-10px"}}>
               {ccyFormat(invoiceTotal)}
             </TableCell>
           </TableRow>

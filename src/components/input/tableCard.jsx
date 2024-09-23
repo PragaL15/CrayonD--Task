@@ -35,7 +35,6 @@ const columns = [
   },
 ];
 
-// Example data source
 const dataSource = [
   {
     key: '1',

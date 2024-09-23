@@ -18,14 +18,14 @@ export default function PaymentCard() {
       >
         <Box
           sx={{
-            width: 490,
+            width: 505,
             height: 538,
             borderRadius: 1,
             bgcolor: 'primary.main',
             '&:hover': {
               bgcolor: 'primary.dark',
             },
-            ml: 94,
+            ml: 92,
           }}
         />
       </ThemeProvider>

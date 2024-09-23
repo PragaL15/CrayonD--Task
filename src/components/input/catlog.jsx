@@ -93,23 +93,23 @@ export default function FoodCatalog() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'inline' }}>
       {/* AppBar with Tabs for different categories */}
-      <Box sx={{ width: '10%', position: 'fixed', top: 0,ml:89,display:'flex' }}>
+      <Box sx={{ width: '10%', position: 'fixed', top: 0,ml:89,display:'inline' }}>
         <AppBar position="static" color="default" elevation={0}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            centered
-            orientation="vertical"
-            sx={{ borderRight: 1, borderColor: 'divider' }}
-          >
-            <Tab label="All" {...a11yProps(0)} />
-            <Tab label="Favourite" {...a11yProps(1)} />
-            <Tab label="Burger" {...a11yProps(2)} />
-            <Tab label="Sandwich" {...a11yProps(3)} />
-            <Tab label="Juice" {...a11yProps(4)} />
-          </Tabs>
+        <Tabs
+  value={value}
+  onChange={handleChange}
+  centered
+  sx={{ borderBottom: 1, borderColor: 'divider',padding:0.7 }} // Change border style for horizontal
+>
+  <Tab label="All" {...a11yProps(0)} />
+  <Tab label="Favourite" {...a11yProps(1)} />
+  <Tab label="Burger" {...a11yProps(2)} />
+  <Tab label="Sandwich" {...a11yProps(3)} />
+  <Tab label="Juice" {...a11yProps(4)} />
+</Tabs>
+
         </AppBar>
       </Box>
 
@@ -177,7 +177,7 @@ export default function FoodCatalog() {
             Juices
           </Typography>
           <Divider />
-          {/* You can add the juice items logic */}
+        
         </TabPanel>
       </Box>
     </Box>

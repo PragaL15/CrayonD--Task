@@ -1,5 +1,6 @@
 .para{
   display: flex;
+  margin-top: 7px;
 }
 .para1{
   font-size: 15px;

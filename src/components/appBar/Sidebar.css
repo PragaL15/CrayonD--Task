@@ -1,17 +1,15 @@
 .sidebar {
   width: 70px;
-  background-color: #04396d;
-  padding: 10px;
+  background-color: #052d54;
+  /* padding: 10px; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
-
 .sidebar-icon {
-  margin: 20px 0;
+  margin: 16px 0;
   color: #ecf0f1;
-  font-size: 24px;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -20,12 +18,14 @@
   color: #2980b9;
   padding: 15px 15px 16px 16px;
   background-color: white;
+  border-radius: 4px;
 }
 
 .sidebar-icon.active {
   color: #2980b9;
   padding: 15px 15px 16px 16px;
   background-color: white;
+  border-radius: 4px;
 }
 
 .sidebar-bottom {

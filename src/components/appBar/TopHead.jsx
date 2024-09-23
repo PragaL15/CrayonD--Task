@@ -33,7 +33,7 @@ export const SearchInputBox = ({ onButtonClick }) => {  // onButtonClick prop pa
     <div className="flex">
       <div className="search-input-container">
         <SearchInput
-          placeholder="Search something..."
+          placeholder=""
           value={value}
           onChange={(_event, value) => onChange(value)}
           onClear={onClear}
