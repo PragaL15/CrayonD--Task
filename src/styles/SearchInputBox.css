@@ -3,15 +3,15 @@
   justify-content: center; /* Centers the input horizontally */
   align-items: center;    /* Centers the input vertically */
   margin-left: 20px;      /* Adds some space around the input */
-  width: 48%;             /* Adjust the width as needed */
-  padding: 10px;
+  width: 45%;             /* Adjust the width as needed */
+  padding: 3px;
   border: 1px solid black;
   border-radius: 3px;
   margin-top: 10px;
   
 }
 .pf-c-search-input {
-  width: 120%;            /* Makes the search input take full width */
+  width: 20%;           
 }
 .flex{
   display: flex;
@@ -21,26 +21,23 @@
 
 .auto-stories-icon {
   border: 1px solid black;
-  padding: 6px 6px 6px 6px;
+  padding: 8px 8px 8px 8px;
   margin-top: 12px;
-  width: 37px;
-  height: 37px;
+  width: 42px;
+  height: 42px;
   margin-left: 39px;
   border-radius: 4px;
 }
 
 /* Hover effect */
 .auto-stories-icon:hover {
-  background-color: rgb(211, 207, 207); /* Background color on hover */
+  background-color: rgb(33, 33, 203); /* Background color on hover */
 }
 /* Parent container for the SearchInput and Icon */
 .search-input-container {
   position: relative;  /* Ensures that the child component positions itself relative to this container */
-  padding: 16px;
+  padding: 10px;
 }
-
-
-
 
 .catalog-overlay {
   position: fixed; /* Ensure it overlaps everything */

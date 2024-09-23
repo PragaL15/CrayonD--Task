@@ -10,17 +10,16 @@ import {Icon} from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import CouponIcon from '@rsuite/icons/Coupon';
 import TagIcon from '@rsuite/icons/Tag';
-import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
 const style = {
   p: 0,
-  width: '200%',
-  maxWidth: 410,
+  width: '220%',
+  maxWidth: 470,
   position: 'absolute',
   borderRadius: 1,
   border: '0px solid none',
   borderColor: 'divider',
-  top:'380px',
-  left:'865px',
+  top:'430px',
+  left:'825px',
   backgroundColor: '#e8eaf6',
 };
 
@@ -29,7 +28,7 @@ export default function ListDividers() {
     <List sx={style} aria-label="mailbox folders">
    
       <ListItem>
-        <ListItemText  primary="Add Notes" sx={{color:'black',marginLeft:'150px'}} />
+        <ListItemText  primary="Add Notes" sx={{color:'black',marginLeft:'130px'}} />
       </ListItem>
       <Divider component="li" />
       <ListItem sx={{padding:'7px 7px 7px 7px'}}>

@@ -5,7 +5,7 @@ import PaymentTable from '../input/PaymentTable';
 import ListDividers from '../input/PayDivider'
 export default function PaymentCard() {
   return (
-    <div className="Pay" style={{ position: 'static' }}> {/* Added relative position */}
+    <div className="Pay" style={{ position: 'static' }}>
       <ThemeProvider
         theme={{
           palette: {
@@ -18,14 +18,15 @@ export default function PaymentCard() {
       >
         <Box
           sx={{
-            width: 505,
-            height: 538,
-            borderRadius: 1,
+            width: 485,
+            height: 540,
+            borderRadius: 0,
             bgcolor: 'primary.main',
             '&:hover': {
               bgcolor: 'primary.dark',
             },
             ml: 92,
+            paddingLeft: 0.5,
           }}
         />
       </ThemeProvider>

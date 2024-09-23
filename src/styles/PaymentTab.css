@@ -1,12 +1,19 @@
-.para{
+.para {
   display: flex;
   margin-top: 7px;
 }
-.para1{
+
+.para1 {
   font-size: 15px;
   font-weight: bold;
   margin-left: 20px;
 }
-.para2{
-  margin-left: 80px;
+
+.para2 {
+  margin-left: 170px;
+}
+
+.grand-total-value {
+  margin-left: 310px; 
+  display: inline-block;
 }

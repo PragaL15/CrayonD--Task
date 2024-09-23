@@ -1,21 +1,22 @@
-/* Styles for the tableCard component */
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&display=swap');
+
+
 .table-card {
   position: absolute;
   padding: 2px;
-  background-color: none; /* Set background color */
-  border-radius: 3px; /* Rounded corners */
-  max-width: 850px; /* Set max width for better control */
+  background-color: white; 
+  border-radius: 3px; 
+  max-width: 850px; 
   width: 730px;
   height: 22 0px;
   margin-top: 106px;
   margin-left: 2px;
 }
 .custom-row {
-  padding: 5px 5px 5px 5px; /* Adjust the padding as needed */
+  padding: 5px 5px 5px 5px; 
 }
-
 .ant-table-cell {
-  padding: 5px 5px 5px 5px; /* Adjust the padding for each cell */
+  padding: 5px 5px 5px 5px;
 }
 
 
