@@ -2,10 +2,11 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import { BiBorderRadius } from 'react-icons/bi';
 
 export default function TitlebarBelowImageList() {
   return (
-    <ImageList sx={{ width: 440, height: 470, ml: 23 }} cols={3} rowHeight={120}>
+    <ImageList sx={{ width: 410, height: 460, ml: 23 }} cols={3} rowHeight={120}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
@@ -18,6 +19,7 @@ export default function TitlebarBelowImageList() {
             title={item.title}
             subtitle={<span>by: {item.author}</span>}
             position="below"
+           
           />
         </ImageListItem>
       ))}
