@@ -5,6 +5,7 @@ import Catlog from './catlog';
 import BillButtons from '../button/billButtons';
 import CloseIcon from '@mui/icons-material/Close';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import '../../styles/cartpage.css'
 
 const cat = {
   fontSize: '16px',
@@ -15,6 +16,7 @@ const cat = {
 
 export default function CatalogPage() {
   return (
+    <div className="whole">
     <Box sx={{ '& button': { m: 1 }, position: 'absolute', left: '650px', top: '10px' }}>
       <div style={cat}>
         <p>Catalog</p>
@@ -44,5 +46,6 @@ export default function CatalogPage() {
         <BillButtons />
       </Box>
     </Box>
+    </div>
   );
 }
