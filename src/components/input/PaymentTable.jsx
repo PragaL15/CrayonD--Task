@@ -3,15 +3,12 @@ import '../../styles/PaymentTab.css';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 
 const TAX_RATE = 0.07;
-
-// Helper class to handle payment calculations
 class PaymentCalculator {
   constructor(items, taxRate) {
     this.items = items;
     this.taxRate = taxRate;
   }
 
-  // Function to calculate subtotal
   calculateSubtotal() {
     return this.items.reduce((sum, { qty }) => {
       const value = parseFloat(qty.replace('SAR ', '')) || 0;
@@ -32,7 +29,7 @@ class PaymentCalculator {
   }
 }
 
-export default function PaymentTable({ initialRows = defaultRows, name = 'Ashwin', icon = <ReceiptLongIcon /> }) {
+export default function PaymentTable({ initialRows = defaultRows, name = 'Ashwin', icon = <ReceiptLongIcon sx={{ml:26,color:'#666'}} /> }) {
   const [rows, setRows] = useState(initialRows);
 
   useEffect(() => {
@@ -55,7 +52,10 @@ export default function PaymentTable({ initialRows = defaultRows, name = 'Ashwin
     <div className="payment-container">
       <div className="payment-header">
         <h1 className="para1">Payment Summary</h1>
-        <p className="para2">{name}</p>
+        <div className="name-with-icon">
+          <span className="icon-container">{icon}</span>
+          <span className="para2">{name}</span>
+        </div>
       </div>
       <table className="payment-table">
         <thead>

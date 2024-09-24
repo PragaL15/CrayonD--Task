@@ -1,4 +1,4 @@
-/* General styles for the payment container */
+
 .payment-container {
   position: absolute;
   top: 1px;
@@ -12,10 +12,13 @@
   font-family: Arial, sans-serif;
 }
 
-/* Payment summary heading and user name */
 .payment-header {
   margin-bottom: 20px;
- display: flex;
+  display: flex;
+}
+
+.bold{
+top: 20px;  
 }
 
 .para1 {
@@ -26,12 +29,9 @@
 }
 
 .para2 {
-  font-size: 16px;
+  font-size: 13px;
   color: #666;
-  margin-left: 140px;
 }
-
-/* Table styling */
 .payment-table {
   width: 90%;
   padding: 4px;
@@ -43,13 +43,12 @@
   padding: 8px;
 }
 
-/* Alignment of right-side columns */
 .align-right {
   text-align: right;
 }
 .payment-table th{
   border:#e3dddd;
-  font-size: 25px;
+  font-size: 20px;
 }
 @media (max-width: 600px) {
   .payment-container {

@@ -15,7 +15,7 @@ import BorderColorOutlinedIcon from "@mui/icons-material/BorderColorOutlined";
 
 const style = {
   p: 0,
-  width: "270%",
+  width: "280%",
   maxWidth: 600,
   position: "absolute",
   borderRadius: 1,

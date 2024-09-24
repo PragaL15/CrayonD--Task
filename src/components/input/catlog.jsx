@@ -5,8 +5,57 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { BiBorderRadius } from 'react-icons/bi';
 
 export default function TitlebarBelowImageList() {
+  
+const itemData = [
+  {
+    img: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Ftheallnaturalvegan.com%2Fwp-content%2Fuploads%2F2023%2F08%2Fmango-juice-featured-image.jpg&tbnid=nnlUYQA8FWbeQM&vet=12ahUKEwiu0Ifz89qIAxUUkmMGHUhODBsQMygCegQIARBt..i&imgrefurl=https%3A%2F%2Ftheallnaturalvegan.com%2Fcold-pressed-golden-mango-juice%2F&docid=DZB4BuvB0uNNtM&w=1200&h=1200&q=mango%20juice&ved=2ahUKEwiu0Ifz89qIAxUUkmMGHUhODBsQMygCegQIARBt',
+    title: 'Chicken',
+    author: '@nolanissac',
+  },
+  {
+    img: '../../assets/frenchFries.jpg',
+    title: 'fries',
+    author: '@hjrc33',
+  },
+  {
+    img: '../../assets/pizza.jpg',
+    title: 'Pizza',
+    author: '@arwinneil',
+  },
+  {
+    img: '../../assets/sandwich.jpg',
+    title: 'Mushroom sandwich',
+    author: '@tjdragotta',
+  },
+  {
+    img: '../../assets/watermelon.jpg',
+    title: 'watermelon',
+    author: '@katie_wasserman',
+  },
+  {
+    img: '../../assets/nachos.jpeg',
+    title: 'Nachos',
+    author: '@silverdalex',
+  },
+  {
+    img: '../../assets/mexican nachos.jpg',
+    title: 'Mexican Nachos',
+    author: '@shelleypauls',
+  },
+  {
+    img: '../../assets/grape.jpg',
+    title: 'Grape juice',
+    author: '@peterlaster',
+  },
+  {
+    img: '../../assets/mango.jpeg',
+    title: 'Mango juice',
+    author: '@southside_customs',
+  },
+];
+
   return (
-    <ImageList sx={{ width: 410, height: 460, ml: 23 }} cols={3} rowHeight={120}>
+    <ImageList sx={{ width: 430, height: 450, ml: 23,overflow:'hidden' }} cols={3} rowHeight={120}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
@@ -26,51 +75,3 @@ export default function TitlebarBelowImageList() {
     </ImageList>
   );
 }
-
-const itemData = [
-  {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
-    author: '@nolanissac',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
-    author: '@hjrc33',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
-    author: '@arwinneil',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
-    author: '@tjdragotta',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
-    author: '@katie_wasserman',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
-    author: '@silverdalex',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
-    author: '@shelleypauls',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-    title: 'Sea star',
-    author: '@peterlaster',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-    title: 'Bike',
-    author: '@southside_customs',
-  },
-];

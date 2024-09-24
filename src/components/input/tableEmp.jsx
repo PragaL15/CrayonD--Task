@@ -4,7 +4,7 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import Counter from '../../components/input/counter';
 import '../../styles/cardPage.css';
 
-const TableCard1 = () => {
+const TableEmpty = () => {
   const [data, setData] = useState([
     {
       key: '1',
@@ -107,6 +107,7 @@ const TableCard1 = () => {
   ];
 
   return (
+    <>
     <div className="table-card">
       <Table
         columns={columns}
@@ -115,7 +116,11 @@ const TableCard1 = () => {
         rowClassName={() => 'custom-row'}
       />
     </div>
+    <div className="image">
+      <img src="../../assets/cart.png"/>
+    </div>
+    </>
   );
 };
 
-export default TableCard1;
+export default TableEmpty;
