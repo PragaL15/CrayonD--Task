@@ -1,42 +1,54 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/PaymentTab.css';
+import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 
 const TAX_RATE = 0.07;
 
-// Function to format currency
-function ccyFormat(num) {
-  return `SAR ${num.toFixed(2)}`;
+// Helper class to handle payment calculations
+class PaymentCalculator {
+  constructor(items, taxRate) {
+    this.items = items;
+    this.taxRate = taxRate;
+  }
+
+  // Function to calculate subtotal
+  calculateSubtotal() {
+    return this.items.reduce((sum, { qty }) => {
+      const value = parseFloat(qty.replace('SAR ', '')) || 0;
+      return sum + value;
+    }, 0);
+  }
+
+  static ccyFormat(num) {
+    return `SAR ${num.toFixed(2)}`;
+  }
+
+  calculateTaxes(subtotal) {
+    return subtotal * this.taxRate;
+  }
+
+  calculateTotal(subtotal, taxes) {
+    return subtotal + taxes;
+  }
 }
 
-// Default rows representing Sub Total, Taxable Amount, and Total Tax
-const defaultRows = [
-  { desc: 'Sub Total', qty: 'SAR 0.00' },
-  { desc: 'Taxable Amount', qty: 'SAR 0.00' },
-  { desc: 'Total Tax', qty: 'SAR 0.00' },
-];
-
-export default function PaymentTable({ initialRows = defaultRows, name = 'Ashwin' }) {
+export default function PaymentTable({ initialRows = defaultRows, name = 'Ashwin', icon = <ReceiptLongIcon /> }) {
   const [rows, setRows] = useState(initialRows);
 
   useEffect(() => {
     setRows(initialRows);
   }, [initialRows]);
 
-  function subtotal(items) {
-    return items.reduce((sum, { qty }) => {
-      const value = parseFloat(qty.replace('SAR ', '')) || 0;
-      return sum + value;
-    }, 0);
-  }
-
-  const invoiceSubtotal = subtotal(rows);
-  const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-  const invoiceTotal = invoiceTaxes + invoiceSubtotal;
+  const paymentCalculator = new PaymentCalculator(rows, TAX_RATE);
+  
+  const invoiceSubtotal = paymentCalculator.calculateSubtotal();
+  const invoiceTaxes = paymentCalculator.calculateTaxes(invoiceSubtotal);
+  const invoiceTotal = paymentCalculator.calculateTotal(invoiceSubtotal, invoiceTaxes);
 
   const updatedRows = [
-    { desc: 'Sub Total', qty: ccyFormat(invoiceSubtotal) },
-    { desc: 'Taxable Amount', qty: ccyFormat(invoiceSubtotal) }, 
-    { desc: 'Total Tax', qty: ccyFormat(invoiceTaxes) },
+    { desc: 'Sub Total', qty: PaymentCalculator.ccyFormat(invoiceSubtotal) },
+    { desc: 'Taxable Amount', qty: PaymentCalculator.ccyFormat(invoiceSubtotal) },
+    { desc: 'Total Tax', qty: PaymentCalculator.ccyFormat(invoiceTaxes) },
   ];
 
   return (
@@ -59,11 +71,17 @@ export default function PaymentTable({ initialRows = defaultRows, name = 'Ashwin
             </tr>
           ))}
           <tr>
-            <td>Grand Total</td>
-            <td className="align-right">{ccyFormat(invoiceTotal)}</td>
+            <td className='bold'>Grand Total</td>
+            <th className="align-right">{PaymentCalculator.ccyFormat(invoiceTotal)}</th>
           </tr>
         </tbody>
       </table>
     </div>
   );
 }
+
+const defaultRows = [
+  { desc: 'Sub Total', qty: 'SAR 0.00' },
+  { desc: 'Taxable Amount', qty: 'SAR 0.00' },
+  { desc: 'Total Tax', qty: 'SAR 0.00' },
+];

@@ -6,6 +6,7 @@ import DogCard from '../../components/input/card1.jsx';
 import TableCard1 from '../../components/input/tableCard.jsx';
 import Catalog from '../../components/input/catlog';  
 import '../../styles/cardPage.css';  
+import CatalogPage from '../../components/input/catalogPage.jsx';
 
 const CartPage = () => {
   const [showCatalog, setShowCatalog] = useState(false); 
@@ -21,7 +22,7 @@ const CartPage = () => {
       <div className="content-container">
         <SearchInputBox onButtonClick={handleButtonClick} />
         <TableCard1 />
-        {!showCatalog ? <PaymentCard /> : <Catalog />}  
+        {!showCatalog ? <PaymentCard /> : <CatalogPage />}  
         <DogCard />
       </div>
      

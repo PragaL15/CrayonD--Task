@@ -13,6 +13,7 @@
 
 .search-input::placeholder {
   color: black; 
+  border: transparent;
   margin-right: 20px;
   opacity: 1; 
   
@@ -20,9 +21,12 @@
 
 
 .search-input input::placeholder {
-  padding-left: 40px;
+  padding-left: 35px;
   color: black; 
   opacity: 1; 
+}
+.search-input{
+  border: transparent;
 }
 
 .flex{
