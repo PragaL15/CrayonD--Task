@@ -72,7 +72,7 @@ export default function TitlebarBelowImageList() {
       }}
       cols={3}
       gap={8} 
-      rowHeight={120}
+      rowHeight={120} 
     >
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
@@ -81,10 +81,10 @@ export default function TitlebarBelowImageList() {
             alt={item.title}
             loading="lazy"
             style={{
-              width: '100%', 
-              height: '100%',
-              objectFit: 'cover',
-              borderRadius: '3px', // Rounded corners
+              width: '100%', // Ensures the image takes up the full width of its container
+              height: '100%', // Ensures the image takes up the full height of its container
+              objectFit: 'cover', // Maintains the aspect ratio, fills the container, and crops the overflow
+              borderRadius: '3px', // Rounded corners for the images
             }}
           />
           <ImageListItemBar
