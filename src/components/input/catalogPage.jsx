@@ -1,51 +1,88 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
+import React from 'react';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import Catlog from './catlog';
-import BillButtons from '../button/billButtons';
-import CloseIcon from '@mui/icons-material/Close';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import '../../styles/cartpage.css'
+import { useNavigate } from 'react-router-dom';
 
-const cat = {
-  fontSize: '16px',
-  fontWeight: '300',
-  marginLeft: '230px',
-  display: 'flex'
-};
+import Chicken from '../../assets/chicken.jpg'
+import frenchFries from '../../assets/frenchFries.jpg';
+import pizza from '../../assets/pizza.jpg';
+import sandwich from '../../assets/sandwich.jpg';
+import watermelon from '../../assets/watermelon.jpg';
+import nachos from '../../assets/nachos.jpeg';
+import mexicanNachos from '../../assets/mexicannachos.jpg';
+import grape from '../../assets/grape.jpg';
+import mango from '../../assets/mango.jpeg';
+
+const itemData = [
+  {
+    img: Chicken,
+    title: 'Chicken',
+    author: '@nolanissac',
+  },
+  {
+    img: frenchFries,
+    title: 'Fries',
+    author: '@hjrc33',
+  },
+  {
+    img: pizza,
+    title: 'Pizza',
+    author: '@arwinneil',
+  },
+  {
+    img: sandwich,
+    title: 'Mushroom Sandwich',
+    author: '@tjdragotta',
+  },
+  {
+    img: watermelon,
+    title: 'Watermelon',
+    author: '@katie_wasserman',
+  },
+  {
+    img: nachos,
+    title: 'Nachos',
+    author: '@silverdalex',
+  },
+  {
+    img: mexicanNachos,
+    title: 'Mexican Nachos',
+    author: '@shelleypauls',
+  },
+  {
+    img: grape,
+    title: 'Grape Juice',
+    author: '@peterlaster',
+  },
+  {
+    img: mango,
+    title: 'Mango Juice',
+    author: '@southside_customs',
+  },
+];
 
 export default function CatalogPage() {
+  const navigate = useNavigate();
+
+  const handleClick = (title) => {
+    const id = 1; 
+    navigate(`/target-component/${id}`); 
+  };
+
   return (
-    <div className="whole">
-    <Box sx={{ '& button': { m: 1 }, position: 'absolute', left: '650px', top: '10px' }}>
-      <div style={cat}>
-        <p>Catalog</p>
-        <CloseIcon sx={{ ml: 22 }} />
-        <MoreVertIcon sx={{ ml: 2 }} />
-      </div>
-      
-      <Box sx={{ display: 'flex', justifyContent: 'flex-end', mr:0.025 }}>
-        <Button variant="outlined" size="small" sx={{ borderColor: 'black', borderRadius: '3px', color: 'black', ml: 1 ,padding:'2px 2px 2px 2px'}}>
-          All
-        </Button>
-        <Button variant="outlined" size="small" sx={{ borderColor: 'black', borderRadius: '3px', color: 'black', ml: 1 }}>
-          Favorite
-        </Button>
-        <Button variant="outlined" size="small" sx={{ borderColor: 'black', borderRadius: '3px', color: 'black', ml: 1 }}>
-          Juice
-        </Button>
-        <Button variant="outlined" size="small" sx={{ borderColor: 'black', borderRadius: '3px', color: 'black', ml: 1 }}>
-          Burger
-        </Button>
-        <Button variant="outlined" size="small" sx={{ borderColor: 'black', borderRadius: '3px', color: 'black', ml: 1 }}>
-          Sandwich
-        </Button>
-      </Box>
-      <Catlog />
-      <Box sx={{ display: 'flex',mb:2,ml:30 }}>
-        <BillButtons />
-      </Box>
-    </Box>
-    </div>
+    <Grid container spacing={2}>
+      {itemData.map((item) => (
+        <Grid item xs={4} key={item.title}>
+          <Button
+            variant="outlined"
+            onClick={() => handleClick(item.title)} 
+            style={{ width: '100%', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            <img src={item.img} alt={item.title} style={{ width: '50px', height: '50px', marginRight: '8px' }} />
+            {item.title}
+          </Button>
+        </Grid>
+      ))}
+    </Grid>
   );
 }

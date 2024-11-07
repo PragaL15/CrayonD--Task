@@ -4,7 +4,6 @@ import SearchInputBox from '../../components/appBar/TopHead';
 import Sidebar1 from '../../components/appBar/sidebar1.jsx';
 import DogCard from '../../components/input/card1.jsx';
 import TableCard1 from '../../components/input/tableCard.jsx';
-import Catalog from '../../components/input/catlog';  
 import '../../styles/cardPage.css';  
 import CatalogPage from '../../components/input/catalogPage.jsx';
 
